@@ -1,0 +1,7 @@
+name: adventofcode2019
+version: 0.1.0
+executable:
+  source-dirs: src
+  main: Main.hs
+  dependencies:
+    - text
