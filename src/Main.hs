@@ -5,10 +5,14 @@ main = do
   input <- getContents
   let input'  = lines input
   let numbers = read <$> input'
-  print $ sum $ calculate <$> numbers
+  print $ sum $ day1part2 <$> numbers
 
-calculate :: Integer -> Integer
-calculate mass = go $ fuelcalc mass
+
+day1part1 :: Float -> Int
+day1part1 mass = floor (mass / 3) - 2
+
+day1part2 :: Integer -> Integer
+day1part2 mass = go $ fuelcalc mass
  where
   fuelcalc :: Integer -> Integer
   fuelcalc x = floor (fromInteger x / 3) - 2
